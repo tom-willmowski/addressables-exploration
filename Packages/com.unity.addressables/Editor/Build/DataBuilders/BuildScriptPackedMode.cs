@@ -520,6 +520,7 @@ namespace UnityEditor.AddressableAssets.Build.DataBuilders
 
             var buildTasks = new List<IBuildTask>
             {
+                new ChangeLineEndings(),
                 new CalculateAssetDependencyData(),
                 new GenerateBundlePacking(),
                 new GenerateBundleCommands(),

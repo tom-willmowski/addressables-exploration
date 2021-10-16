@@ -6,7 +6,7 @@ using UnityEngine.ResourceManagement.ResourceLocations;
 
 public class Loader : MonoBehaviour
 {
-    private const string remoteUrl = "http://192.168.8.103:8080";
+    private const string remoteUrl = "http://83.142.142.181:5001";
     private const string REMOTE_URL_KEY = "RemoteURL";
     
     // Start is called before the first frame update

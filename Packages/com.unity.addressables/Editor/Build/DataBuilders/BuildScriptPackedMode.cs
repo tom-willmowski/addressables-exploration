@@ -243,6 +243,7 @@ namespace UnityEditor.AddressableAssets.Build.DataBuilders
                 using (m_Log.ScopedStep(LogLevel.Info, "ContentPipeline.BuildAssetBundles"))
                 using (new SBPSettingsOverwriterScope(ProjectConfigData.GenerateBuildLayout)) // build layout generation requires full SBP write results
                 {
+                    ChangeLineEndings.RunForPaths(m_AllBundleInputDefs.SelectMany(e => e.assetNames).ToList());
                     var exitCode = ContentPipeline.BuildAssetBundles(buildParams, new BundleBuildContent(m_AllBundleInputDefs), out results, buildTasks, aaContext, m_Log);
 
                     if (exitCode < ReturnCode.Success)

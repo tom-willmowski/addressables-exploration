@@ -72,5 +72,17 @@ namespace UnityEditor.Build.Pipeline.Tasks
                 Convert(path);
             }
         }
+
+        public static void RunForPaths(List<string> paths)
+        {
+            foreach (var path in paths)
+            {
+                foreach (var dependency in AssetDatabase.GetDependencies(path))
+                {
+                    Convert(dependency);
+                }
+                Convert(path);
+            }
+        }
     }
 }

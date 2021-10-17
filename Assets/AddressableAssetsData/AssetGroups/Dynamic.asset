@@ -18,7 +18,11 @@ MonoBehaviour:
   m_GUID: 336910e97b5b2934f81abe39e6f9596c
   m_SerializeEntries:
   - m_GUID: 8cf86e7a28f952d4490c12fd5f7c22c6
-    m_Address: Sphere
+    m_Address: SphereRed
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 335baf1ba5cbeb84fbf8a4ae3159c6ef
+    m_Address: SphereBlack
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

@@ -4,12 +4,14 @@ using UnityEditor.AddressableAssets.Build;
 using UnityEditor.AddressableAssets.Settings;
 using UnityEditor.Build.Pipeline.Utilities;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace Clash.Editor
 {
     [CreateAssetMenu]
     public class AddressablesBuildScript : ScriptableObject
     {
+        [MenuItem("CNXT/Build Addressables")]
         public static void Build()
         {
             Build(new BuildOptions()
@@ -20,16 +22,22 @@ namespace Clash.Editor
                 VersionCode = 1,
                 BuildAddressables = true,
                 UseAAB = false,
-                IsPlayground = true,
+                IsPlayground = false,
                 UseRemoteConsole = false
             });
         }
         
+        [MenuItem("CNXT/Update Addressables")]
         public static void UpdateBuild()
         {
             string statePath = EditorUtility.OpenFilePanel("select addressables state path", "Assets/", "bin");
-            //var changes = ContentUpdateScript.GatherModifiedEntries(AddressableAssetSettingsDefaultObject.Settings, statePath);
-            //ContentUpdateScript.CreateContentUpdateGroup(AddressableAssetSettingsDefaultObject.Settings, changes, "update");
+            var changes = ContentUpdateScript.GatherModifiedEntries(AddressableAssetSettingsDefaultObject.Settings, statePath);
+            if (changes != null && changes.Count > 0)
+            {
+                ContentUpdateScript.CreateContentUpdateGroup(AddressableAssetSettingsDefaultObject.Settings, changes, "update");
+            }
+            BuildCache.PurgeCache(false);
+            Addressables.CleanBundleCache();
             ContentUpdateScript.BuildContentUpdate(AddressableAssetSettingsDefaultObject.Settings, statePath);
         }
         

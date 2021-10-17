@@ -12,6 +12,7 @@ public class Loader : MonoBehaviour
     // Start is called before the first frame update
     private async void Start()
     {
+        Caching.ClearCache();
         await UpdateAssetsCatalog();
         await LoadStatic();
         await LoadDynamic();

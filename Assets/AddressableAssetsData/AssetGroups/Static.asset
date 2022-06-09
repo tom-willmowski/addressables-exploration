@@ -21,6 +21,12 @@ MonoBehaviour:
     m_Address: Cube
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf6adc308eb136f4cb220020f507d187
+    m_Address: Static
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 7b73f8282f71ff54c84cf9946bdbcdda, type: 2}
   m_SchemaSet:

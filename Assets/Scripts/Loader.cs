@@ -5,9 +5,6 @@ using UnityEngine.ResourceManagement.ResourceLocations;
 
 public class Loader : MonoBehaviour
 {
-    // private const string remoteUrl = "http://127.0.0.1:5001";
-    // private const string REMOTE_URL_KEY = "RemoteURL";
-    
     private async void Start()
     {
         Addressables.InternalIdTransformFunc += OnInternalIdTransfrom;

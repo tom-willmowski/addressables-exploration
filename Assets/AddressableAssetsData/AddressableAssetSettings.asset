@@ -29,11 +29,14 @@ MonoBehaviour:
   m_ShaderBundleNaming: 2
   m_ShaderBundleCustomNaming: undead_clash
   m_MonoScriptBundleNaming: 0
+  m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
     m_Id: 33d8fb301d3dace449b69cd1852dd2a5
   m_RemoteCatalogLoadPath:
     m_Id: 159964aa033ca104db03082a8b2e5424
+  m_ContentStateBuildPathProfileVariableName: 
+  m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: 1
@@ -75,7 +78,7 @@ MonoBehaviour:
       - m_Id: 33d8fb301d3dace449b69cd1852dd2a5
         m_Value: ServerData/[BuildTarget]
       - m_Id: 159964aa033ca104db03082a8b2e5424
-        m_Value: '{RemoteURL}/[BuildTarget]'
+        m_Value: http://127.0.0.1:5001/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: 2738c6cd709549449829a19141cc1879
       m_Name: BuildTarget
